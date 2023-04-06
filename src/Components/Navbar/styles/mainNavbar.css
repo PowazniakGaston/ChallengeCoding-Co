@@ -1,0 +1,204 @@
+.navbar{
+    padding: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.navbar-brand{
+    padding: 0px!important;
+    font-size: unset!important;
+}
+
+.image-iso{
+    filter: brightness(0%);
+}
+
+.nav-items a{
+    position: relative;
+}
+
+.nav-items a{
+    margin: 0px 20px;
+    padding: 20px 0px;
+    text-decoration: none;
+    color: #000;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.nav-items a:hover{
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.nav-items a:hover::before{
+    content: url("../../../Assets/img/hex-blue.svg");
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    transform: scale(.8);
+}
+
+.social-nav-items a img{
+    filter: brightness(0%);
+    margin: 0px  8px;
+    padding: 20px 0px;
+}
+
+.navbar.sticky-top{
+    background-color: #FF1F57;
+    transition-timing-function: ease-in;
+    transition: 0.8s;
+    position: sticky;
+}
+
+.navbar.sticky-top .nav-items a{
+    color: #fff;
+}
+
+.navbar.sticky-top .social-nav-items a img{
+    filter: brightness(100%);
+}
+
+.image-logo{
+    filter: invert(1);
+}
+/*Navbar Template Dark*/
+.navbar-template-dark .nav-items a {
+color: #E9E6E1;
+}
+
+.navbar-template-dark .image-iso{
+    filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(5793%) hue-rotate(312deg) brightness(87%) contrast(113%);
+}
+
+.navbar-template-dark  .social-nav-items a img{
+    filter: brightness(0) saturate(100%) invert(99%) sepia(53%) saturate(411%) hue-rotate(34deg) brightness(114%) contrast(82%);
+}
+
+
+
+/*Navbar Template Orange*/
+.navbar-template-orange .nav-items a {
+    color: #E9E6E1;
+    }
+    
+.navbar-template-orange .image-iso{
+     filter: brightness(0) saturate(100%) invert(99%) sepia(53%) saturate(411%) hue-rotate(34deg) brightness(114%) contrast(82%);
+}
+.navbar-template-orange .social-nav-items a img{
+    filter: brightness(0) saturate(100%) invert(99%) sepia(53%) saturate(411%) hue-rotate(34deg) brightness(114%) contrast(82%);
+}
+
+
+
+@media only screen and (max-width: 990px) {
+    .navbar{
+        padding: 10px 0px!important;
+    }
+    .navbar.sticky-top,.navbar{
+        background-color: #E9E6E1;
+    }
+    .image-logo{
+        filter: invert(0);
+    }
+    .whatsapp-box{
+        display: flex;
+        column-gap: 5px;
+    }    
+    .whatsapp-box img{
+        width: 20px;
+    }
+    .whatsapp-box span{
+        font-size: 14px;
+        font-family: 'Work Sans', sans-serif;
+    }
+    .navbar-toggler{
+        border: none!important;
+    }
+    .navbar-toggler:focus{
+        box-shadow: unset!important;
+    }
+    .offcanvas.offcanvas-top.show{
+        height: 100%;
+    }
+    .offcanvas{
+        background-color: #E9E6E1;
+    }
+    .offcanvas-body{
+        padding: 0px !important;
+    }
+    .nav-items a{
+        border-top-style: dashed;
+        border-color: #707070;
+        border-width: 1px;
+        border-spacing: 5px;
+        margin: 0px;
+        padding:10px 20px;
+        color: #000;
+        font-family: Larken;
+        font-weight: 600;
+        font-size: 28px;
+    }
+    .nav-items{
+        padding-right: 0px!important;
+        text-align: center;
+    }
+    .text-offcanvas-mobile{
+        border-top-style: dashed;
+        border-color: #707070;
+        border-width: 1px;
+        border-spacing: 5px;
+        padding-top: 30px;
+        text-align: center;
+    }
+    .text-offcanvas-mobile h5{
+        color: #000;
+        font-family: Larken;
+        font-weight: 600;
+        font-size: 28px;
+    }
+    .text-offcanvas-mobile span{
+        font-family: 'Work Sans';
+        font-size: 14px;
+        font-weight: 500;
+              
+    }
+    .social-nav-items{
+        text-align: center;
+    }
+    .social-nav-items a img{
+        width: 30px;
+        filter: brightness(50%);
+        margin: 0px 15px;
+    }
+    .footer-offcanvas-mobile{
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        background-color: #000;
+        display: flex;
+        padding: 10px 0px;
+        justify-content: space-around;
+    }
+    .footer-offcanvas-mobile img{
+        width: 30px;
+    }
+    .footer-offcanvas-mobile p{
+        margin: 0;
+        font-family: Larken;
+        font-weight: 100;
+        font-size: 32px;
+        color: #E9E6E1;
+    }
+
+    
+
+
+}
+
