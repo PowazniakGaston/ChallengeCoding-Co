@@ -1,5 +1,18 @@
 import React from 'react'
 import { useMediaQuery } from 'react-responsive'
+
+  // import Swiper JS
+  import { Swiper, SwiperSlide } from "swiper/react";
+
+  // import Swiper styles
+  // import Swiper and modules styles
+  import 'swiper/css';
+  import 'swiper/css/navigation';
+  import 'swiper/css/pagination';
+// import required modules
+import { Autoplay, Navigation } from "swiper";
+
+
 import "./styles/homeHero.css"
 
 // Import Images
@@ -25,61 +38,96 @@ export default function HomeHero(props) {
     <div className={`home-hero-container template-${randomBackground}`}>
       <div className='home-inner-container'>
         <img className='asterisk' src={asterisk} alt='asterisk picture'/>
-
         <img className='small-asterisk' src={asterisk} alt='asterisk picture'/>
         <img className='ellipse' src={ellipse} alt='ellipse picture'/>
         <img className='trap' src={trap} alt='trap picture'/>
         {!isTabletOrMobile &&
         <>
-        <div className='static-hex-block'>
-          <img className='static-hex' src={hex} alt='hex picture'/>
-          <p>Ultimos<br/>lugares</p>
-        </div>
         <img className='hex' src={randomBackground=="grey" ? hexFull: hex} alt='hex picture'/>
         <img className='arrow-transparent' src={arrowTransparent} alt='arrow transparent picture'/>
         </>
         }
-        <div className='row-border-top'>
-          <div className='home-inner-row row-padding'>
-            <div className='row-flex-contain-dir-row'>
+        <div className='container-borders-background'>
+          <hr className='background-border'/>
+          <hr className='background-border'/>
+          <hr className='background-border'/>
+          <hr className='background-border'/>
+        </div>
+        <div className='cel-flex-contain-dir-row inner-block-text-container'>
+          <div className='home-inner-col'>
+            <div className='home-inner-cel cel-flex-contain-dir-row'>
               <img className='minus-logo' src={minusImage} alt='minus logo'/>
               <img className='brother-logo' src={brotherLogo} alt='brother logo'/>
-            </div>            
-            <div></div>
-          </div>
-        </div>
-        <div className='row-border-top'>
-          <div className='home-inner-row '>
-            <div className='row-flex-contain-dir-row'>
+            </div>
+            <div className='home-inner-cel cel-flex-contain-dir-row'>
               <h1>Madrid</h1>
               <img className='arrow-top-right' src={arrowTopRight} alt='arrow icon'/>
             </div>
-            <div className='box-with-hover-effect'>
-              <h5>Curso Anual de Creatividad</h5>
-              <p>Hay plazas disponibles.<br/>Apúntate!</p>         
-              <img className='bar-dots' src={barDots} alt='bar dots picture'/>  
+            <div className='home-inner-cel'>
+              <div className='cel-flex-contain-dir-row'>
+                  <h4>Doers School</h4>
+              </div>
             </div>
-          </div>  
-        </div>  
-        <div className='row-border-top'>
-          <div className='home-inner-row'>
-            <div className='row-flex-contain-dir-row'>
-              <h4>Doers School</h4>
+          </div>
+
+          <div className='home-inner-col'>
+            <div className='home-inner-cel relative-cell'>
+              <div className='static-hex-block'>
+                <img className='static-hex' src={hex} alt='hex picture'/>
+                <p>Ultimos<br/>lugares</p>
+              </div>
             </div>
-            <div className='box-with-hover-effect'>
-              <h5>Planificación y Estrategia Creativa</h5>
-              <p>Quedan pocas plazas.<br/>No te quedes fuera!</p>            
-            </div>
-            </div>  
-        </div>   
-        <div className='row-border-top'>
-        <div className='home-inner-row'>
-            <div className='row-flex-contain-dir-row'>
-            </div>
-            <div className='box-with-hover-effect'>         
-            </div>
-            </div>   
-        </div>  
+            {isTabletOrMobile ?        
+            <>    
+            
+            <img className='bar-dots' src={barDots} alt='bar dots picture'/>     
+                <Swiper
+                centeredSlides={true}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  modules={[Autoplay, Navigation]}
+                  className="hero-home-slider"
+                >
+                  <SwiperSlide className='box-with-hover-effect'>              
+                    <h5>Curso Anual de Creatividad</h5>
+                    <p>Hay plazas disponibles.<br/>Apúntate!</p>       
+                  </SwiperSlide>  
+                  <SwiperSlide className='box-with-hover-effect'>
+                      <h5>Planificación y Estrategia Creativa</h5>
+                      <p>Quedan pocas plazas.<br/>No te quedes fuera!</p> 
+                  </SwiperSlide>
+                </Swiper>       
+                 </>       
+                :
+                <>
+              <div className='home-inner-cel box-with-hover-effect'>
+                  <h5>Curso Anual de Creatividad</h5>
+                  <p>Hay plazas disponibles.<br/>Apúntate!</p>         
+                  <img className='bar-dots' src={barDots} alt='bar dots picture'/>  
+              </div>
+              <div className='home-inner-cel box-with-hover-effect'>  
+                    <h5>Planificación y Estrategia Creativa</h5>
+                    <p>Quedan pocas plazas.<br/>No te quedes fuera!</p>   
+              </div>
+              <div className='box-transition-container'>
+                <div className='text-transition-box'>
+                  <p className='text-transition'>  // Ver todos los cursos  </p>
+                  <p className='text-transition'>  // Ver todos los cursos  </p>
+                  <p className='text-transition'>  // Ver todos los cursos  </p>
+                  <p className='text-transition'>  // Ver todos los cursos  </p>
+                  <p className='text-transition'>  // Ver todos los cursos  </p>
+                </div>                
+              </div>
+            </>
+                }
+
+          </div>
+        </div>
         <img className='simple-arrow' src={simpleArrow} alt='simple arrow picture'/>
 
       </div>      
