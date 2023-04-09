@@ -1,0 +1,57 @@
+/*Transition text*/
+.transition-text-container{
+    white-space: nowrap;
+    display: flex;
+    overflow: hidden;
+    z-index: 999;
+ }
+ .transition-text-box{
+    padding-left: 0;
+    animation: move-right-to-left 30s linear infinite;
+ }
+ .transition-text-box-copy{
+    padding-left: 0;
+    animation: move-right-to-left 30s linear infinite;
+ }
+.transition-inner-box{
+    display: flex;
+ }
+.transition-text{
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    margin: 0 5px;
+    font-size: 14px;
+    padding: 10px 0px;
+ }
+
+ .transition-text p{
+    margin: 0;
+font-family: 'Work Sans';
+font-size: 20px;
+font-weight: 700;
+ }
+
+ .about-brothers-container .transition-text p{
+    color: #E1DF3C;
+ }
+
+ .news-container .transition-text p{
+    color: #fff;
+ }
+
+ .about-brothers-container .transition-text-container{
+    background-color: #000;
+ }
+
+ .news-container  .transition-text-container{
+    background-color:#FF1F57;
+    position: relative;
+ }
+ 
+
+ @keyframes move-right-to-left {
+    0% { transform: translateX(0) }
+    100% { transform: translateX(-100%) }
+  }
+ /*End Transition text*/

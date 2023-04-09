@@ -17,6 +17,11 @@ import thumb6 from "../../../../../Assets/img/thumb-06.jpg"
 
 // import icons
 import arrowBlack from "../../../../../Assets/img/right-arrow-black.svg"
+import yellowArrow from "../../../../../Assets/img/yellow-arrows.svg"
+import yellowBear from "../../../../../Assets/img/yellow-bear.svg"
+
+// import Utilities Transition text
+import TransitionText from '../../../../Utilities/TransitionText/TransitionText'
 
 export default function AboutBrothers() {
     const workshopsData = [
@@ -89,9 +94,9 @@ function handleScrollDown() {
 
   return (
     <div className='about-brothers-container'>
+        <img className='trap' src={trap} alt='trap picture'/>
+        <img className='cloud' src={cloud} alt='cloud picture'/>
         <div className='about-inner-container'>            
-            <img className='trap' src={trap} alt='trap picture'/>
-            <img className='cloud' src={cloud} alt='cloud picture'/>
             <div className='about-col col-left'>
                 <p className='col-left-title'>Mucho más <br/> que una escuela de <br/><b><span>creativos</span></b></p> 
                 <p className='col-left-description'>
@@ -128,6 +133,7 @@ function handleScrollDown() {
                 </div>
             </div>
         </div>
+        <TransitionText imageOne={yellowArrow} imageTwo={yellowBear} textTransition={"Chequea todos los cursos"}/>
     </div>
   )
 }
