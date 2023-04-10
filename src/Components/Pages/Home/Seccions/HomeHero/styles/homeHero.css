@@ -675,4 +675,7 @@ font-family: 'Work Sans';
         bottom: 285px;
         left: 260px;
     }
+    .chat-box{
+        right: 20px;
+    }
   }
