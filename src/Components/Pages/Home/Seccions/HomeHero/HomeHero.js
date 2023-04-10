@@ -27,6 +27,7 @@ import arrowTransparent from "../../../../../Assets/img/white-arrow.svg"
 import ellipse from "../../../../../Assets/img/magenta-circle.svg"
 import simpleArrow from "../../../../../Assets/img/white-arrow-down.svg"
 import hexFull from "../../../../../Assets/img/yellow-hex-full.svg"
+import chatIcon from "../../../../../Assets/img/chat.svg"
 
 
 
@@ -130,7 +131,11 @@ export default function HomeHero(props) {
         </div>
         <img className='simple-arrow' src={simpleArrow} alt='simple arrow picture'/>
 
-      </div>      
+      </div>  
+      <div className='chat-box'>
+          <img src={chatIcon} alt='chat icon'/>
+          <p>Hola, Bro :)</p>
+        </div>    
     </div>
   )
 }

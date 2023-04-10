@@ -245,6 +245,24 @@ font-family: 'Work Sans';
   .text-transition{
     flex-shrink: 0;
   }
+
+  .chat-box{
+    z-index: 99999;
+    position: fixed;
+    bottom: 20px;
+    padding: 14px 22px;
+    right: 100px;
+    background-color: #0E64BA;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    border-radius: 25px 0px 0px 0px;
+  }
+  .chat-box p{
+    margin: 0;
+    color: #fff;
+    font-weight: 700;
+  }
   
   @keyframes scrolling {
     0% { transform: translateX(0) }
@@ -299,6 +317,10 @@ font-family: 'Work Sans';
 
 .template-yellow  .box-with-hover-effect::before{
     background-color: #E9E6E1;
+}
+
+.template-yellow   .chat-box{
+    background-color: #E6511B;
 }
 
 /*Template Dark*/
